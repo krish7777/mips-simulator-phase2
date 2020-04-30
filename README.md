@@ -49,8 +49,8 @@ BEQ R1, R4, label
 
 ```bash
 LW R1, 0(R2)
-any instruction
-instruction depending on R1
+ADD R4, R5, R6
+BEQ R1 , R3, label
 ```
 
 ```bash
