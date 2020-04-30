@@ -1178,8 +1178,8 @@ int main()
                                 if (!programStack[RF1[0]][1].compare(programStack[MEM1[0]][1]) || !programStack[RF1[0]][2].compare(programStack[MEM1[0]][1]))
                                 {
                                     //lw r1, 0(r2)
-                                    //some instr
-                                    //some instr depending on r1
+                                    //add r4,r5,r6
+                                    //beq r1,r3,label
                                     stall++;
                                     z7 = 1;
                                 }
@@ -1219,7 +1219,6 @@ int main()
 
                 if (z3 == 0 && z4 == 0 && z7 == 0)
                 {
-                    //cout<<"xx "<<std::flush<<endl;
                     EX[1] = 1;
                     EX1[1] = RF1[0];
                     if (!programStack[RF1[0]][0].compare("bgt"))
@@ -1274,7 +1273,7 @@ int main()
             {
 
                 //beq r1,r2 label
-                //any instr
+                //any instruction
                 //1 stall
                 if (i != 0)
                 {
@@ -1291,7 +1290,6 @@ int main()
                 if (z2 == 0)
                 {
                     inst++;
-                    //cout<<"xx "<<std::flush<<endl;
                     RF1[1] = i;
                     RF[1] = 1;
                     i++;
